@@ -9,20 +9,18 @@ public:
 	~GameComponent();
 	virtual void Update(const tm* eventTime);
 private:
-	int id;
+	int id = 1;
 	static int instances;
 };
 
 //Constructor
 GameComponent::GameComponent() {
-	int incId = ++this->instances;
-	this->id = incId;
+	this->id = ++this->instances;
 }
 
 //Destructor
 GameComponent::~GameComponent() {
-	int decId = --this->id;
-	this->id = decId;
+	this->id = --this->id;
 }
 
 //Public Methods

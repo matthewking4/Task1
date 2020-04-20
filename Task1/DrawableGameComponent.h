@@ -43,19 +43,19 @@ void DrawableGameComponent::Update(const tm* eventTime) {
 
 	switch (this->direction) {
 	case Left:
-		--this->x;
+		this->x--;
 		if (x < 0) this->x = 0;
 		break;
 	case Right:
-		++this->x;
+		this->x++;
 		if (x > SCREEN_WIDTH) this->x = SCREEN_WIDTH;
 		break;
 	case Up:
-		++this->y;
+		this->y++;
 		if (y > SCREEN_HEIGHT) y = SCREEN_HEIGHT;
 		break;
 	case Down:
-		--this->y;
+		this->y--;
 		if (y < 0) this->y = 0;
 		break;
 	default:

@@ -1,4 +1,3 @@
-//Used to hide the localtime() deprecation warming
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
@@ -28,4 +27,5 @@ int main() {
 	game.Add(drawableGameComponent);
 
 	game.Run();
+	system("Pause");
 }
